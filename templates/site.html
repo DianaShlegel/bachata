@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Школа танцев</title>
+</head>
+<body>
+<img src="https://thumb.tildacdn.com/tild6339-3735-4062-b139-643063313766/-/resize/600x/-/format/webp/___1___1___1_1_2.jpg"
+     alt="бачата">
+<h1><b>Школа танцев</b></h1>
+<table border="1">
+    <tr>
+        <th>Ученик</th>
+        <th>Возраст</th>
+        <th>Город</th>
+        <th>Стиль</th>
+    </tr>
+    {% for customer in customers %}
+    <tr>
+        <td>{{customer.name}}</td>
+        <td>{{customer.age}}</td>
+        <td>{{customer.city.name}}</td>
+        <td>{{customer.get_styles()}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<img src="https://thumb.tildacdn.com/tild3630-6331-4533-b361-643330636338/-/resize/700x/-/format/webp/Group_23.png"
+     alt="бачата" align="right">
+</body>
+</html>
